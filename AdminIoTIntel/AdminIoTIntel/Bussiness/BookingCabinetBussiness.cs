@@ -20,7 +20,8 @@ namespace adminiotintel.Bussiness
 
         public Booking_Cabinet getBookingByID(decimal bookingID)
         {
-            return db.Booking_Cabinet.Where(x => x.BookingID == bookingID).FirstOrDefault();
+            Booking_Cabinet result =  db.Booking_Cabinet.Where(x => x.BookingID == bookingID).FirstOrDefault();
+            return result;
         }
 
         public Booking_Cabinet getBookingByEventID(decimal eventID)
