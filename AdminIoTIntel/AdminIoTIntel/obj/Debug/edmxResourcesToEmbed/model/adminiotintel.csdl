@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IOT_Intel_SS10Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Booking_Event">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TimeStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserHostID" Type="Int32" Nullable="false" />
+    <Property Name="UserCreatedID" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingUsers">
+    <Key>
+      <PropertyRef Name="BookingUserID" />
+    </Key>
+    <Property Name="BookingUserID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookingID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cabinet">
+    <Key>
+      <PropertyRef Name="CabinetID" />
+    </Key>
+    <Property Name="CabinetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Pincode" Type="Int32" Nullable="false" />
+    <Property Name="UserCreatedID" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="GroupUser">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserCreatedID" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Menu_Fuctions">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="MenuName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FormName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="NotificationID" />
+    </Key>
+    <Property Name="NotificationID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="BookingID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <Property Name="TimeStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedID" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ResetPassUser">
+    <Key>
+      <PropertyRef Name="ResetPassID" />
+    </Key>
+    <Property Name="ResetPassID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="PinCode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserCreatedID" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="RoomID" />
+    </Key>
+    <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserCreatedID" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Images" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KeyUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserCreatedID" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Users_Fuctions">
+    <Key>
+      <PropertyRef Name="FunctionID" />
+    </Key>
+    <Property Name="FunctionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="IsView" Type="Int32" Nullable="false" />
+    <Property Name="IsEdit" Type="Int32" Nullable="false" />
+    <Property Name="IsDelete" Type="Int32" Nullable="false" />
+    <Property Name="IsAddNew" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="IOT_Intel_SS10Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Booking_Event" EntityType="Self.Booking_Event" />
+    <EntitySet Name="BookingUsers" EntityType="Self.BookingUsers" />
+    <EntitySet Name="Cabinet" EntityType="Self.Cabinet" />
+    <EntitySet Name="GroupUser" EntityType="Self.GroupUser" />
+    <EntitySet Name="Menu_Fuctions" EntityType="Self.Menu_Fuctions" />
+    <EntitySet Name="Notifications" EntityType="Self.Notifications" />
+    <EntitySet Name="ResetPassUser" EntityType="Self.ResetPassUser" />
+    <EntitySet Name="Rooms" EntityType="Self.Rooms" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Users_Fuctions" EntityType="Self.Users_Fuctions" />
+    <FunctionImport Name="GetListBookingCabinet" ReturnType="Collection(IOT_Intel_SS10Model.GetListBookingCabinet_Result)" />
+    <FunctionImport Name="GetListBookingEvent" ReturnType="Collection(IOT_Intel_SS10Model.GetListBookingEvent_Result)" />
+    <FunctionImport Name="getListBookingUser" ReturnType="Collection(IOT_Intel_SS10Model.getListBookingUser_Result)">
+      <Parameter Name="eventID" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <EntitySet Name="Booking_Cabinet" EntityType="IOT_Intel_SS10Model.Booking_Cabinet" />
+  </EntityContainer>
+  <ComplexType Name="GetListBookingCabinet_Result">
+    <Property Type="Decimal" Name="BookingID" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="CabinetID" Nullable="false" />
+    <Property Type="String" Name="CabinetName" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="Pincode" Nullable="false" />
+    <Property Type="DateTime" Name="TimeStart" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="TimeEnd" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="UserHostID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="UserCreatedID" Nullable="false" />
+    <Property Type="DateTime" Name="DateCreated" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="UserUpdatedID" Nullable="false" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetListBookingEvent_Result">
+    <Property Type="Decimal" Name="EventID" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="RoomID" Nullable="false" />
+    <Property Type="String" Name="RoomName" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="TimeStart" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="TimeEnd" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="UserHostID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="UserCreatedID" Nullable="false" />
+    <Property Type="DateTime" Name="DateCreated" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="UserUpdatedID" Nullable="false" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="getListBookingUser_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Phone" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="Booking_Cabinet">
+    <Key>
+      <PropertyRef Name="BookingID" />
+    </Key>
+    <Property Name="BookingID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CabinetID" Type="Int32" Nullable="false" />
+    <Property Name="Pincode" Type="Int32" Nullable="false" />
+    <Property Name="TimeStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserHostID" Type="Int32" Nullable="false" />
+    <Property Name="UserCreatedID" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

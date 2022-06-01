@@ -1,0 +1,189 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterAdmin.master.cs" Inherits="adminiotintel.masterpage.MasterAdmin" %>
+
+<%@ Register Src="../ctrl/ctrlMenu.ascx" TagName="ctrlMenu" TagPrefix="uc1" %>
+<%@ Register Src="../ctrl/ctrlReportListUsers.ascx" TagName="ctrlReportListUsers"
+    TagPrefix="uc2" %>
+<%@ Register Src="../ctrl/ctrlReportListBooking.ascx" TagName="ctrlReportListBooking" TagPrefix="uc3" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="Administrator's IoT Intel" name="keywords" />
+    <meta content="Administrator's IoT Intel" name="description" />
+    <title>Administrator's IoT Intel</title>
+    <meta property="og:image" itemprop="thumbnailFacebook" content="http://adminmotolok.way.vn/images/logo1.png" />
+    <asp:Literal ID="ltrClockp" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrClockh" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrJquey" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrDaccordion" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrScreen" runat="server"></asp:Literal>
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="mainPage">
+            <div id="header">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <a href="#" title="">
+                    <img src="../images/logo.png" alt="Logo" width="70%" /></a>
+                <ul class="topmenu">
+                    <li><a href="../Logout.aspx" title="Logout system"><b>(<asp:Literal ID="ltrUserName"
+                        runat="server"></asp:Literal>)</b> Logout</a></li>
+                    <li>|</li>
+                    <li><a href="#" title="Help's to support for use">Helps & Support</a></li>
+                </ul>
+
+                <uc1:ctrlMenu ID="ctrlMenu1" runat="server" />
+            </div>
+            <div id="top-out">
+                &nbsp;
+            </div>
+            <div id="wrapmain">
+                <div id="contentleft">
+                    <div class="group-left">
+                        <uc2:ctrlReportListUsers ID="ctrlReportListUsers" runat="server" />
+              
+                        <uc3:ctrlReportListBooking ID="ctrlReportListBooking" runat="server" />
+                     <h2 style="margin-top: 20px;"></h2>
+
+                    </div>
+                </div>
+                <div id="contentmid">
+                    <img src="../images/centerclose.gif" alt="" />
+                </div>
+                <div id="contentright">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="bottom">
+                <img src="../images/img-bottom.png" alt="" />
+            </div>
+        </div>
+         <asp:Literal ID="ltrJqueryUI" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrJquery18" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrJqueryuijs" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrTimepickerCss" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrTimepickerJs" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrtimepickercss1" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrtimepickerjs1" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrAccountting" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrScript" runat="server"></asp:Literal>
+    <script type="text/javascript">
+        var windowSizeArray = ["width=620,height=480", "width=650,height=450", "width=620,height=500,scrollbars=yes", "width=950,height=530,scrollbars=yes"];
+        $(document).ready(function () {
+            $('.newWindow').click(function (event) {
+                var url = $(this).attr("href");
+                var windowName = "popUp"; //$(this).attr("name");
+                var windowSize = windowSizeArray[$(this).attr("rel")];
+                var win = window.open(url, windowName, windowSize);
+                event.preventDefault();
+            });
+
+            $(".moneyformat").keyup(function () {
+                amountF = $(this).val();
+                amountF = accounting.formatNumber(amountF);
+                $(this).val(amountF);
+            });
+
+            $('#ContentPlaceHolder1_showPassword').on('click', function () {
+                var passwordField = $('#ContentPlaceHolder1_txtPassWord');
+                var passwordFieldType = passwordField.attr('type');
+
+                if (passwordFieldType == 'password') {
+                    passwordField.prop('type', 'text');
+                    $(this).text('Hide');
+                }
+                else {
+                    passwordField.prop('type', 'password');
+                    $(this).text('Show');
+                }
+            });
+
+            $('#showPasswordNew').on('click', function () {
+                var passwordField = $('#ContentPlaceHolder1_txtPassNew');
+                var passwordFieldType = passwordField.attr('type');
+
+                if (passwordFieldType == 'password') {
+                    passwordField.prop('type', 'text');
+                    $(this).text('Hide');
+                }
+                else {
+                    passwordField.prop('type', 'password');
+                    $(this).text('Show');
+                }
+            });
+
+            $('#showPassNewAgain').on('click', function () {
+                var passwordField = $('#ContentPlaceHolder1_txtPassNewAgain');
+                var passwordFieldType = passwordField.attr('type');
+
+                if (passwordFieldType == 'password') {
+                    passwordField.prop('type', 'text');
+                    $(this).text('Hide');
+                }
+                else {
+                    passwordField.prop('type', 'password');
+                    $(this).text('Show');
+                }
+            });
+
+        });
+
+        $(function () {
+            $(".datepicker").datepicker({
+                //showOn: 'both',
+                buttonImage: urlIconDate,
+                buttonImageOnly: false,
+                showmonth: true,
+                autoSize: true,
+                showAnim: 'slideDown',
+                duration: 'fast',
+                dateFormat: "dd-mm-yy"
+            });
+        });
+
+        $(function () {
+            $(".datetimepicker").datetimepicker({
+                //showOn: 'both',
+                buttonImage: urlIconDate,
+                buttonImageOnly: false,
+                showmonth: true,
+                autoSize: true,
+                showAnim: 'slideDown',
+                duration: 'fast',
+                dateFormat: "dd-MM-yyyy hh:mm tt"
+            });
+        });
+
+        //$(function () {
+        //    $(".datetimepicker").datetimepicker();
+
+        //});
+
+        //        $(function () {
+        //            $(".datetimepicker").datetimepicker({
+        //                format: "dd/mm/yy hh:mm"
+        //            });
+        //        });
+
+        $(function () {
+            $("#tabs").tabs();
+
+        });
+
+        function ValidateDelete(action) {
+            return confirm('Do you want ' + action + ' this row ?');
+        }
+
+
+
+
+    </script>
+    </form>
+</body>
+</html>

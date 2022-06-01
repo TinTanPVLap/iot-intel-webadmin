@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IOT_Intel_SS10ModelStoreContainer" CdmEntityContainer="IOT_Intel_SS10Entities">
+    <EntitySetMapping Name="Booking_Event">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.Booking_Event">
+        <MappingFragment StoreEntitySet="Booking_Event">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="UserHostID" ColumnName="UserHostID" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingUsers">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.BookingUsers">
+        <MappingFragment StoreEntitySet="BookingUsers">
+          <ScalarProperty Name="BookingUserID" ColumnName="BookingUserID" />
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cabinet">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.Cabinet">
+        <MappingFragment StoreEntitySet="Cabinet">
+          <ScalarProperty Name="CabinetID" ColumnName="CabinetID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupUser">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.GroupUser">
+        <MappingFragment StoreEntitySet="GroupUser">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu_Fuctions">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.Menu_Fuctions">
+        <MappingFragment StoreEntitySet="Menu_Fuctions">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.Notifications">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResetPassUser">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.ResetPassUser">
+        <MappingFragment StoreEntitySet="ResetPassUser">
+          <ScalarProperty Name="ResetPassID" ColumnName="ResetPassID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.Rooms">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="KeyUser" ColumnName="KeyUser" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users_Fuctions">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.Users_Fuctions">
+        <MappingFragment StoreEntitySet="Users_Fuctions">
+          <ScalarProperty Name="FunctionID" ColumnName="FunctionID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="IsView" ColumnName="IsView" />
+          <ScalarProperty Name="IsEdit" ColumnName="IsEdit" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsAddNew" ColumnName="IsAddNew" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetListBookingCabinet" FunctionName="IOT_Intel_SS10Model.Store.GetListBookingCabinet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IOT_Intel_SS10Model.GetListBookingCabinet_Result">
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="CabinetID" ColumnName="CabinetID" />
+          <ScalarProperty Name="CabinetName" ColumnName="CabinetName" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="UserHostID" ColumnName="UserHostID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetListBookingEvent" FunctionName="IOT_Intel_SS10Model.Store.GetListBookingEvent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IOT_Intel_SS10Model.GetListBookingEvent_Result">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="UserHostID" ColumnName="UserHostID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getListBookingUser" FunctionName="IOT_Intel_SS10Model.Store.getListBookingUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IOT_Intel_SS10Model.getListBookingUser_Result">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Booking_Cabinet">
+      <EntityTypeMapping TypeName="IOT_Intel_SS10Model.Booking_Cabinet">
+        <MappingFragment StoreEntitySet="Booking_Cabinet">
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserUpdatedID" ColumnName="UserUpdatedID" />
+          <ScalarProperty Name="UserCreatedID" ColumnName="UserCreatedID" />
+          <ScalarProperty Name="UserHostID" ColumnName="UserHostID" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="CabinetID" ColumnName="CabinetID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
