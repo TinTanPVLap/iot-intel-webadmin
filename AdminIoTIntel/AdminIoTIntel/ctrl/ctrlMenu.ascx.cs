@@ -21,10 +21,14 @@ namespace adminiotintel.ctrl
                 if (typeUserID == TypeUserIDCons.Administrator)
                 {
                     liUser.Visible = true;
+                    liCabinetList.Visible = true;
+                    liRoomList.Visible = true;
                 }
                 else
                 {
                     liUser.Visible = false;
+                    liCabinetList.Visible = false;
+                    liRoomList.Visible = false;
                 }
             }
         }

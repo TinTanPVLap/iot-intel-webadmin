@@ -28,14 +28,17 @@ namespace adminiotintel
                 Session["UserID"] = users.UserID;
                 Session["GroupID"] = users.GroupID;
                 this.UserNameLogin = strUserName;
-                Response.Redirect("~/UserLists.aspx");
-            }   
+                if (users.GroupID == TypeUserIDCons.Administrator)
+                    Response.Redirect("~/UserLists.aspx");
+                else
+                    Response.Redirect("~/BookingCabinetsList.aspx");
+            }
             else
             {
                 CommonClass.MessageBox.Show("Tên truy cập hoặc mật khẩu truy cập không đúng");
                 txtPassword.Text = string.Empty;
                 txtPassword.Focus();
-            }    
+            }
         }
     }
 }

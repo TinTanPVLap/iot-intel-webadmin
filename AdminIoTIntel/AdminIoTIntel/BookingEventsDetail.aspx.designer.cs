@@ -78,6 +78,15 @@ namespace adminiotintel
         protected global::System.Web.UI.WebControls.CheckBox chkBkCabinet;
 
         /// <summary>
+        /// liCabinet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liCabinet;
+
+        /// <summary>
         /// ddlTCabinet control.
         /// </summary>
         /// <remarks>
@@ -87,6 +96,15 @@ namespace adminiotintel
         protected global::System.Web.UI.WebControls.DropDownList ddlTCabinet;
 
         /// <summary>
+        /// liPincode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liPincode;
+
+        /// <summary>
         /// txtPincode control.
         /// </summary>
         /// <remarks>
@@ -94,6 +112,15 @@ namespace adminiotintel
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPincode;
+
+        /// <summary>
+        /// liDatetime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liDatetime;
 
         /// <summary>
         /// txtTimeStartCabinet control.

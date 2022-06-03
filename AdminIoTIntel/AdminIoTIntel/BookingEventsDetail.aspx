@@ -44,15 +44,15 @@
                </li>
            </ul>
             <ul style="margin-left:10px; padding-left:10px;padding-right:10px">
-               <li>
+               <li runat="server" id ="liCabinet">
                    <label for="<%=ddlTCabinet.ClientID%>">Cabinet</label>
                     <asp:DropDownList ID="ddlTCabinet" runat="server" CssClass="Dropdown"></asp:DropDownList>
                </li>
-               <li>
+               <li runat ="server" id="liPincode">
                     <label for="<%=txtPincode.ClientID%>">Pincode</label>
                    <asp:TextBox ID="txtPincode" runat="server" ReadOnly="true" Enabled="false"></asp:TextBox>
                </li>
-               <li>
+               <li runat="server" id="liDatetime">
                    <label for="<%=txtTimeStartCabinet.ClientID%>">
                         TimeStart</label><asp:TextBox ID="txtTimeStartCabinet" runat="server" CssClass="datetimepicker" Width="130" TextMode ="DateTime" ></asp:TextBox>
                     <label for="<%=txtTimeEndCabinet.ClientID%>">

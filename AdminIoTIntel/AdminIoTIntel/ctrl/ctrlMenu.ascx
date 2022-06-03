@@ -7,7 +7,7 @@
                 <li runat="server" id="liUser">
                     <asp:HyperLink ID="hplUsers" runat="server" ToolTip="List User" NavigateUrl ="~/UserLists.aspx">List Users</asp:HyperLink>
                 </li>
-                <li>
+                <li runat="server" id="liChangePassword">
                     <a href="../ChangePassWord.aspx" title ="Change Password">Change Password</a>
                 </li>
             </ul>
@@ -15,10 +15,10 @@
         <li>
             <asp:HyperLink ID="hplRoom" runat="server" ToolTip="Rooms">Room</asp:HyperLink>
             <ul>
-                <li>
+                <li runat="server" id="liRoomList">
                     <a href="../RoomList.aspx" title="List Rooms">List Rooms</a>
                 </li>
-                <li>
+                <li runat="server" id="liBookingEvent">
                     <a href ="../BookingEventsList.aspx" title="List Booking Events">List Booking Events</a>
                 </li>
             </ul>
@@ -26,10 +26,10 @@
         <li class ="end">
             <asp:HyperLink ID="hplCabinet" runat="server" ToolTip="Cabinet">Cabinet</asp:HyperLink>
             <ul>
-                <li>
+                <li runat="server" id="liCabinetList">
                     <a href="../CabinetList.aspx" title ="List Cabinets">List Cabinets</a>
                 </li>
-                <li>
+                <li runat="server" id="liBookingCabinet">
                     <a href ="../BookingCabinetsList.aspx" title ="List Booking Cabinets">List Booking Cabinets</a>
                 </li>
             </ul>

@@ -42,6 +42,15 @@ namespace adminiotintel.ctrl
         protected global::System.Web.UI.WebControls.HyperLink hplUsers;
 
         /// <summary>
+        /// liChangePassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liChangePassword;
+
+        /// <summary>
         /// hplRoom control.
         /// </summary>
         /// <remarks>
@@ -51,6 +60,24 @@ namespace adminiotintel.ctrl
         protected global::System.Web.UI.WebControls.HyperLink hplRoom;
 
         /// <summary>
+        /// liRoomList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liRoomList;
+
+        /// <summary>
+        /// liBookingEvent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liBookingEvent;
+
+        /// <summary>
         /// hplCabinet control.
         /// </summary>
         /// <remarks>
@@ -58,5 +85,23 @@ namespace adminiotintel.ctrl
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hplCabinet;
+
+        /// <summary>
+        /// liCabinetList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liCabinetList;
+
+        /// <summary>
+        /// liBookingCabinet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liBookingCabinet;
     }
 }

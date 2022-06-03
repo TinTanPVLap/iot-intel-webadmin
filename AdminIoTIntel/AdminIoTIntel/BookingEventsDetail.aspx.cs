@@ -470,9 +470,12 @@ namespace adminiotintel
 
         private void setEnableControl(bool bRe)
         {
-            ddlTCabinet.Enabled = bRe;
-            txtTimeStartCabinet.Enabled = bRe;
-            txtTimeEndCabinet.Enabled = bRe;
+            //ddlTCabinet.Enabled = bRe;
+            //txtTimeStartCabinet.Enabled = bRe;
+            //txtTimeEndCabinet.Enabled = bRe;
+            liCabinet.Visible = bRe;
+            liPincode.Visible = bRe;
+            liDatetime.Visible = bRe;
         }
 
         private string getCCListEmail(int userID)
