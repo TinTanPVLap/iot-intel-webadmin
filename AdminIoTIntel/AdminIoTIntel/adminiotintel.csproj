@@ -231,6 +231,7 @@
     <Content Include="BookingCabinetsList.aspx" />
     <Content Include="BookingEventsList.aspx" />
     <Content Include="CabinetList.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="RoomDetail.aspx" />
     <Content Include="RoomList.aspx" />
     <Content Include="Login.aspx" />
@@ -398,6 +399,13 @@
     </Compile>
     <Compile Include="CabinetList.aspx.designer.cs">
       <DependentUpon>CabinetList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="masterpage\MasterNewWindows.Master.cs">
       <DependentUpon>MasterNewWindows.Master</DependentUpon>

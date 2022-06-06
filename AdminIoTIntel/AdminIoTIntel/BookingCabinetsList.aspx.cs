@@ -46,9 +46,14 @@ namespace adminiotintel
 
         private void LoadGrid()
         {
+            int groupID = int.Parse(Session["GroupID"].ToString());
+            int userID = this.UserIDLogin;
+            if (groupID == TypeUserIDCons.Administrator)
+                userID = 0;
+
             string keySearch = txtKey.Text.Trim();
             int cabinetID = int.Parse(ddlCabinet.SelectedValue);
-            List<GetListBookingCabinet_Result> lstBooking = obj.getListBookingCabinet(keySearch, cabinetID);
+            List<GetListBookingCabinet_Result> lstBooking = obj.getListBookingCabinet(keySearch, cabinetID, userID);
             radGridBooking.DataSource = lstBooking;
             radGridBooking.DataBind();
         }
@@ -111,9 +116,14 @@ namespace adminiotintel
 
         protected void radGridBooking_NeedDataSource(object source, GridNeedDataSourceEventArgs e)
         {
+            int groupID = int.Parse(Session["GroupID"].ToString());
+            int userID = this.UserIDLogin;
+            if (groupID == TypeUserIDCons.Administrator)
+                userID = 0;
+
             string keySearch = txtKey.Text.Trim();
             int cabinetID = int.Parse(ddlCabinet.SelectedValue);
-            List<GetListBookingCabinet_Result> lstBooking = obj.getListBookingCabinet(keySearch, cabinetID);
+            List<GetListBookingCabinet_Result> lstBooking = obj.getListBookingCabinet(keySearch, cabinetID, userID);
             radGridBooking.DataSource = lstBooking;
         }
     }

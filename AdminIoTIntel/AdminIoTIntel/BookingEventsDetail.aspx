@@ -66,7 +66,7 @@
                         ToolTip="Save" OnClick="lbtSave_Click">Save</asp:LinkButton>
                     <asp:LinkButton ID="lbtDelete" runat="server" CssClass="deleterequest" ToolTip="Delete"
                         CausesValidation="false" OnClick="lbtDelete_Click" Style="margin-left: 5px;">Delete</asp:LinkButton>
-                    <a href="UserLists.aspx" title="Close" style="margin-left: 5px;">Close</a>
+                    <a href="BookingEventsList.aspx" title="Close" style="margin-left: 5px;">Close</a>
                 </li>
                 <li>&nbsp;</li>
           </ul>

@@ -46,9 +46,14 @@ namespace adminiotintel
 
         private void LoadGrid()
         {
+            int groupID = int.Parse(Session["GroupID"].ToString());
+            int userID = this.UserIDLogin;
+            if (groupID == TypeUserIDCons.Administrator)
+                userID = 0;
+
             string keySearch = txtKey.Text.Trim();
             int roomID = int.Parse(ddlRoom.SelectedValue);
-            List<GetListBookingEvent_Result> lstEvent = obj.getListBookingEvent(keySearch, roomID);
+            List<GetListBookingEvent_Result> lstEvent = obj.getListBookingEvent(keySearch, roomID, userID);
             radGridBooking.DataSource = lstEvent;
             radGridBooking.DataBind();
         }
@@ -111,9 +116,14 @@ namespace adminiotintel
 
         protected void radGridBooking_NeedDataSource(object source, GridNeedDataSourceEventArgs e)
         {
+            int groupID = int.Parse(Session["GroupID"].ToString());
+            int userID = this.UserIDLogin;
+            if (groupID == TypeUserIDCons.Administrator)
+                userID = 0;
+
             string keySearch = txtKey.Text.Trim();
             int roomID = int.Parse(ddlRoom.SelectedValue);
-            List<GetListBookingEvent_Result> lstEvent = obj.getListBookingEvent(keySearch, roomID);
+            List<GetListBookingEvent_Result> lstEvent = obj.getListBookingEvent(keySearch, roomID, userID);
             radGridBooking.DataSource = lstEvent;
         }
     }

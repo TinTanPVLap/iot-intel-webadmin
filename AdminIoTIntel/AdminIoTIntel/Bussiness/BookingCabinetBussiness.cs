@@ -11,10 +11,10 @@ namespace adminiotintel.Bussiness
     {
         IOT_Intel_SS10Entities db = new IOT_Intel_SS10Entities();
 
-        public List<GetListBookingCabinet_Result> getListBookingCabinet(string keyWord, int cabinetID)
+        public List<GetListBookingCabinet_Result> getListBookingCabinet(string keyWord, int cabinetID, int userID)
         {
             List<GetListBookingCabinet_Result> lstResult = db.GetListBookingCabinet().Where(x => (x.CabinetName.Contains(keyWord) || x.FullName.Contains(keyWord)
-            || keyWord == "") && (x.CabinetID == cabinetID || cabinetID == 1000)).ToList();
+            || keyWord == "") && (x.CabinetID == cabinetID || cabinetID == 1000) && (x.UserHostID == userID || userID == 0)).ToList();
             return lstResult;
         }
 

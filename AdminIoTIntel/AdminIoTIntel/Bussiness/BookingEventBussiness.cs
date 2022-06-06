@@ -10,10 +10,10 @@ namespace adminiotintel.Bussiness
     public class BookingEventBussiness
     {
         IOT_Intel_SS10Entities db = new IOT_Intel_SS10Entities();
-        public List<GetListBookingEvent_Result> getListBookingEvent(string keyWord, int roomID)
+        public List<GetListBookingEvent_Result> getListBookingEvent(string keyWord, int roomID, int userID)
         {
             List<GetListBookingEvent_Result> lstResult = db.GetListBookingEvent().Where(x => (x.Title.Contains(keyWord) || x.FullName.Contains(keyWord)
-            || keyWord == "") && (x.RoomID == roomID || roomID == 1000)).ToList();
+            || keyWord == "") && (x.RoomID == roomID || roomID == 1000) && (x.UserHostID == userID || userID ==0)).ToList();
             return lstResult;
         }
 

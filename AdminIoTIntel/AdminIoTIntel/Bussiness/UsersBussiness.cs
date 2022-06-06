@@ -12,7 +12,7 @@ namespace adminiotintel.Bussiness
 
         public Users CheckingLogin(string username, string passWord)
         {
-            return db.Users.Where(x => x.UserName == username && x.Password == passWord).FirstOrDefault();       
+            return db.Users.Where(x => x.UserName == username && x.Password == passWord && x.Status == 1).FirstOrDefault();       
         }
 
         public Users GetUserByID(int userID)
